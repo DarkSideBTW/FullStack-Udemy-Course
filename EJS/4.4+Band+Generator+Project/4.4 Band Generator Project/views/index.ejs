@@ -1,5 +1,13 @@
 <!-- Step 3 Add Header -->
+<%- include('partials/header.ejs') %>
 
+<% if(locals.adjective && locals.noun) { %>
+
+<h1><%= adjective%> <%= noun%></h1>
+
+<%} else {%>
+<h1>Welcome to the Band Generator 🤟</h1>
+<%}%>
 
 <!-- Step 2 - If an adjective and noun are sent to this ejs file, 
     Change the h1 to show the adjective and noun.
@@ -7,6 +15,8 @@
     Show the default h1 below -->
 
 <form action="/submit" method="POST">
-  <input type="submit" value="Generate Name">
+  <input type="submit" value="Generate Name" />
 </form>
 <!-- Step 3 Add Footer -->
+
+<%- include('partials/footer.ejs') %>
