@@ -1,0 +1,16 @@
+<h1>TodoList</h1>
+<ul>
+  <% todosList.forEach((todo) => { %>
+
+  <li style="list-style-type: none;">
+    <input type="checkbox" name="<%= todo %>" />
+    <label for="<%= todo %>"><%= todo %></label>
+</li>
+
+  <% }) %>
+</ul>
+
+<form action="/submit" method="POST">
+  <input type="text" name="addTodo" placeholder="Enter Your New ToDo" required />
+  <input type="submit" value="Add Todo"/>
+</form>
